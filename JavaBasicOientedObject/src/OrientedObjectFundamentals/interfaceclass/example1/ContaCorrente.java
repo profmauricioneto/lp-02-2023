@@ -8,15 +8,21 @@ package OrientedObjectFundamentals.interfaceclass.example1;
  *
  * @author maumneto
  */
-public class ContaCorrente implements OperacoesBancarias {
+public class ContaCorrente implements OperacoesBancarias, OperacoesPessoais {
     protected double montante;
+    protected String nome;
+    protected int id;
 
     public ContaCorrente() {
         this.montante = 0;
+        this.nome = "Unknown";
+        this.id = 0;
     }
 
     public ContaCorrente(double montante) {
         this.montante = montante;
+        this.nome = "Unknown";
+        this.id = 0;
     }
     
     @Override
@@ -37,13 +43,25 @@ public class ContaCorrente implements OperacoesBancarias {
             System.out.println("Não é possível debitar a quantia desejada.");
         }
     }
-    
-    
-    
-    
-    
-    
-    
-    
+
+    @Override
+    public int getId() {
+        return id;
+    }
+
+    @Override
+    public void setId(int id) {
+        this.id = id;
+    }
+
+    @Override
+    public String getNome() {
+        return nome;
+    }
+
+    @Override
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
     
 }
