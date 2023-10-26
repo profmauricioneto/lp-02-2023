@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package solid;
+package OrientedObjectFundamentals.solid;
 
 /**
  *
@@ -58,6 +58,18 @@ class VirtualAccount extends Account {
     }
 }
 
+class PlusAccount extends Account {
+    public PlusAccount() {
+        super();
+    }
+    public PlusAccount(double balance) {
+        super(balance);
+    }
+    public void createPlusAccount() {
+        System.out.println("Plus Account created.");
+    }
+}
+
 class CreateAccount {
     public static void createAccountByType(Account account) {
         if (account instanceof OrdinaryAccount) {
@@ -66,6 +78,8 @@ class CreateAccount {
             ((SalaryAccount) account).createSalaryAccount();
         } else if (account instanceof VirtualAccount) {
             ((VirtualAccount) account).createVirtualAccount();
+        } else if (account instanceof PlusAccount) {
+            ((PlusAccount) account).createPlusAccount();
         } else {
             System.out.println("No one of account type was choosen.");
         }

@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package solid;
+package OrientedObjectFundamentals.solid;
 
 class Square {
     public double length;
