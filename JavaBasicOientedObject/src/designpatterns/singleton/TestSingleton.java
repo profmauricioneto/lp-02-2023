@@ -2,20 +2,17 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
  * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
  */
-package OrientedObjectFundamentals.polymorphism.example02;
-
-import java.util.List;
-import java.util.ArrayList;
+package designpatterns.singleton;
 
 /**
  *
  * @author maumneto
  */
-public class MainTest {
-
+public class TestSingleton {
     public static void main(String[] args) {
-        Pessoa p1 = new Funcionario("Arex");
-//        Funcionario p2 = (Funcionario) p1;
-        p1.imprimir();
+        Singleton sing1 = Singleton.getInstance();
+        Singleton sing2 = Singleton.getInstance();
+        System.out.println(sing1);
+        System.out.println(sing2);
     }
 }
