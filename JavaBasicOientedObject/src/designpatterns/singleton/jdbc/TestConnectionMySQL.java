@@ -13,7 +13,12 @@ public class TestConnectionMySQL {
     public static void main(String[] args) {
         try {
             ConnectionDB conn1 = ConnectionDB.getInstance();
-            ConnectionDB conn2 = ConnectionDB.getInstance(); 
+            ConnectionDB conn2 = ConnectionDB.getInstance();
+            if (conn1 == conn2) {
+                System.out.println("Instancias iguais.");
+            } else {
+                System.out.println("Instancias diferentes.");
+            }
             System.out.println(conn1);
             System.out.println(conn2);
         } catch (SQLException e) {

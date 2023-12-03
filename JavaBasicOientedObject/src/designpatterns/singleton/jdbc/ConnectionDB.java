@@ -25,7 +25,7 @@ public class ConnectionDB {
         }
     }
 
-    public static ConnectionDB getInstance() throws
+    public static synchronized ConnectionDB getInstance() throws
             SQLException {
         if (instance == null) {
             instance = new ConnectionDB();

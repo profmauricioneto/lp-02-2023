@@ -1,7 +1,3 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
 package np2solution.questao05;
 
 /**
@@ -10,9 +6,10 @@ package np2solution.questao05;
  */
 public class PessoaFisica extends Pessoa {
     private String cpf;
+    public Departamento departamento;
     
-    public PessoaFisica(int id, String name) {
-        super(id);
+    public PessoaFisica(int id, Departamento departamento, String name) {
+        super(id, departamento);
         setName(name);
     }
     
