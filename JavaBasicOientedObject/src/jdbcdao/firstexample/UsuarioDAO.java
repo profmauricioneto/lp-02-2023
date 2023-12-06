@@ -26,6 +26,7 @@ public class UsuarioDAO {
         }
     }
     
+    // create - adicionar usuario ao banco!
     public void addUsuario(Usuario usuario) {
         String sql = "INSERT INTO usuario (nome, altura, endereco, data) VALUES (?,?,?,?)";
         try {
@@ -44,6 +45,7 @@ public class UsuarioDAO {
         }
     }
     
+    // projecao de todos os dados da tabela!
     public void mostrarUsuario() {
         String sql = "SELECT * FROM usuario";
         try {
@@ -82,7 +84,7 @@ public class UsuarioDAO {
     }
     
     public void update(Usuario usuario, long id) {
-        String sql = "UPDATE usuarios SET nome = ?, altura = ?, endereco = ?, data = ? WHERE id = ?";
+        String sql = "UPDATE usuario SET nome = ?, altura = ?, endereco = ?, data = ? WHERE id = ?";
         try {
             PreparedStatement state;
             state = connection.prepareStatement(sql);

@@ -119,7 +119,7 @@ public class TestMain {
         String nome = reader.readLine();
         usuario.setNome(nome);
         
-        System.out.print("Novo Email: ");
+        System.out.print("Altura: ");
         double altura = Double.parseDouble(reader.readLine());
         usuario.setAltura(altura);
         
